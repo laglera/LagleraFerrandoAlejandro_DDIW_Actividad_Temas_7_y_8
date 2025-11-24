@@ -63,11 +63,11 @@
 
 ## 4. Capturas de pantalla
 
-| Descripción | Vista previa |
-|-------------|--------------|
-| **Modal de consentimiento** | «¿Quieres activar el audio de fondo?» – botones *Cancelar* / *Activar* |
-| **Sección Contacto (colapsable)** | «Más información sobre el portfolio» |
-| **Video Portfolio** | Botón «Reproducir video» con `poster` personalizado |
-| **Botón flotante** | Ícono minimalista en esquina inferior izquierda para silenciar / activar audio |
+| Descripción | Imagen |
+|-------------|--------|
+| **Modal de consentimiento** | ![Modal consentimiento](imagenes-repositorio/modal-consentimiento.png) |
+| **Sección Contacto (colapsable)** | ![Collapse contacto](imagenes-repositorio/collapse.png) |
+| **Video Portfolio** | ![Video portfolio](imagenes-repositorio/video.png) |
+| **Botón flotante** | ![Botón audio](imagenes-repositorio/boton.png) |
 
 ---
