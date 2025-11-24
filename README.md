@@ -1,73 +1,73 @@
-Ejercicio Temas 7-8: Integración Multimedia
-Alejandro Laglera Ferrando
-Índice
-  - Subtítulo del encabezado
-Ejercicio Temas 7-8: Integración Multimedia
-Selección de formatos de audio y video
-Audio de fondo:
-Video de presentación:
-Configuraciones de reproducción
-Desafios técnicos
-Capturas de pantalla
-Subtítulo del encabezado 3^
-1. Selección de formatos de audio y video
-Audio de fondo:
-MP3 (192 kbps) + OGG (q7)
-Razon: MP3 alcanza el 98% de navegadores, OGG cubre FIrefox/Chrome en Linux sin
-licencias
-Accesibilidad: Se ofrece un botón “Silenciar” visible desde el primer momento y un
-modal de consentimiento al entrar, evitando molestias a usuarios con déficit de
-atención o lectores de pantalla
-Video de presentación:
-MP4 H.264 (baseline, 720p, 1 Mbps) + OGG Theora + WebM VP
-Razon: MP4 es compatible con Safari iOS/macOS, WebM cubre Chrome/Firefox/Edge,
-OGG asegura soporte en navegadores open-source antiguos
-Accesibilidad: Subtítulos no necesarios al ser video mudo (Solo música de fondo), se
-incluye poster para indicar contenido antes de pulsar “Reproducir”.
-2. Configuraciones de reproducción
-Elemento Propiedad Valor Justificacion UX
-Audio preload=”none” No descarga hasta
-aceptar modal
-Ahorra datos
-móviles
-Audio loop + volume=0,05 Bucle a 5% volumen Ambiente sin
-distracción
-Video preload=”none” No carga hasta
-hacer clic
-Reduce 800 kB de
-entrada
-Video controls Nativos visibles Usuario decide
-pausar o saltar
-Video poster=”img/poste
-r.jpg”
-Portada profesional
-Subtítulo del encabezado 4^
-3. Desafios técnicos
-Problema Solucion
+# MEDAC – Integración Multimedia  
+**Ejercicio Temas 7-8**  
+*Alejandro Laglera Ferrando*
 
-Los navegadores bloquean el autoplay Puse un modal que pregunta si quieren
-activar audio, tras aceptar, suena
+---
 
-El audio suena demasiado fuerte Baje el volumen a 0,05 nada más
-reproducirlo
+## 📂 Índice
+1. [Selección de formatos de audio y video](#1-selección-de-formatos-de-audio-y-video)
+2. [Configuraciones de reproducción](#2-configuraciones-de-reproducción)
+3. [Desafíos técnicos](#3-desafíos-técnicos)
+4. [Capturas de pantalla](#4-capturas-de-pantalla)
 
-El video pesa mucho Dejé preload=”none” y lo comprimi en
-MP4, WebM y OGG para que solo se
-descargue si deciden verlo
+---
 
-El botón flotante estorbaba Lo pase a la esquina inferior izquierda y lo
-hice mas pequeño
+## 1. Selección de formatos de audio y video
 
-Smart-TV y moviles viejos Usé H.264 baseline, para que se
-reproduzca en cualquier dispositivo
+### 🎵 Audio de fondo
+- **Formatos:**  
+  `MP3 (192 kbps)` + `OGG (q7)`
+- **Razón:**  
+  - MP3 cubre el 98 % de navegadores.  
+  - OGG asegura compatibilidad en Firefox/Chrome sobre Linux sin licencias.
+- **Accesibilidad:**  
+  - Botón **«Silenciar»** visible desde el primer momento.  
+  - Modal de consentimiento al entrar para evitar molestias a usuarios con déficit de atención o lectores de pantalla.
 
-Subtítulo del encabezado 5^
-4. Capturas de pantalla
-Modal que pide consentimiento para reproducir el audio
+### 🎬 Video de presentación
+- **Formatos:**  
+  `MP4 H.264 (baseline, 720p, 1 Mbps)` + `OGG Theora` + `WebM VP8`
+- **Razón:**  
+  - MP4 ⇨ Safari iOS / macOS.  
+  - WebM ⇨ Chrome / Firefox / Edge.  
+  - OGG ⇨ Navegadores open-source antiguos.
+- **Accesibilidad:**  
+  - Sin subtítulos (video mudo solo con música).  
+  - Incluye `poster` para indicar contenido antes de pulsar.
 
-Collapse en la sección de contacto
+---
 
-Video Portfolio con botón para reproducirlo
+## 2. Configuraciones de reproducción
 
-Subtítulo del encabezado 6^
-Boton flotante para activar/desactivar el audio de fondo
+| Elemento | Atributo | Valor | Justificación UX |
+|----------|----------|--------|------------------|
+| Audio | `preload` | `none` | No descarga hasta aceptar el modal → ahorro de datos móviles |
+| Audio | `loop` + `volume` | `0.05` | Bucle suave sin distracción |
+| Video | `preload` | `none` | No carga hasta clic → -800 kB en entrada |
+| Video | `controls` | nativos | El usuario decide pausar o saltar |
+| Video | `poster` | `img/poster.jpg` | Portada profesional antes de la reproducción |
+
+---
+
+## 3. Desafíos técnicos
+
+| Problema | Solución implementada |
+|----------|-----------------------|
+| **Bloqueo de autoplay** | Modal que solicita activar el audio; tras aceptar, se reproduce. |
+| **Volumen excesivo** | Volumen fijado a `0.05` al iniciar. |
+| **Peso del video** | `preload="none"` + compresión en MP4, WebM y OGG. |
+| **Botón flotante intrusivo** | Movido a la esquina inferior izquierda y reducido de tamaño. |
+| **Compatibilidad Smart-TV / móviles viejos** | Códec H.264 baseline para máxima compatibilidad. |
+
+---
+
+## 4. Capturas de pantalla
+
+| Descripción | Vista previa |
+|-------------|--------------|
+| **Modal de consentimiento** | «¿Quieres activar el audio de fondo?» – botones *Cancelar* / *Activar* |
+| **Sección Contacto (colapsable)** | «Más información sobre el portfolio» |
+| **Video Portfolio** | Botón «Reproducir video» con `poster` personalizado |
+| **Botón flotante** | Ícono minimalista en esquina inferior izquierda para silenciar / activar audio |
+
+---
