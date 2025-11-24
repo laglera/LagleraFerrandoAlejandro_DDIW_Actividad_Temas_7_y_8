@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(#e0e0e0 1px, transparent 1px),
+    linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+  background-size: 40px 40px;
+  padding-top: calc(80px + 20px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(1.8) brightness(1.1);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8) brightness(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+  0 8px 32px rgba(0, 0, 0, 0.08),
+  inset 0 1px 0 rgba(255, 255, 255, 0.4),
+  inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 20px;
+  text-align: left;        
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 20px;
+  color: #000;
+}
+
+.header .enlaces {
+  display: flex;
+  gap: 20px;
+}
+
+
+.header .enlaces a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+
+.Sobremi, .ProyectosDestacados, .Contacto {
+  margin: 50px;
+  padding: 25px;
+  border: 2px solid #dbd9d0;
+  border-radius: 15px;
+  background-color: #ffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+} 
+
+.contenido-sobremi {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.info-personal {
+    flex: 1;
+}
+
+.info-personal p {
+  padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+    
+}
+
+.trayectoria-escolar {
+    flex: 1;
+    background: linear-gradient(90deg, rgba(84, 179, 216, 0.86) 0%, rgba(149, 190, 203, 0.813) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.trayectoria-escolar h3 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -25px;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.3);
+}
+
+.timeline-content h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+}
+
+.timeline-content .institucion {
+    margin: 0 0 5px 0;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+.timeline-content .fecha {
+    background: rgba(255,255,255,0.2);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contenido-sobremi {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .trayectoria-escolar {
+        padding: 25px;
+    }
+    
+    .tags {
+        justify-content: flex-start;
+    }
+}
+
+.Contacto {
+  padding: 30px 20px;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.Contacto h2 {
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.Contacto label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.Contacto input,
+.Contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #dbd9d0;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.Contacto button {
+  width: 100%;
+  padding: 15px;
+  background-color: #000000;
+  color: #ffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .header p {
+    font-size: 18px;
+  }
+
+  .header .enlaces {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Sobremi, .ProyectosDestacados, .Contacto {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Contacto {
+    padding: 20px 15px;
+  }
+
+  .Contacto h2 {
+    font-size: 1.5rem;
+  }
+
+  .Contacto button {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+}
+
+footer {
+  background-color: #000; 
+    background-image: 
+    linear-gradient(#444444 1px, transparent 1px),
+    linear-gradient(90deg, #444444 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
+}
+
+.footer p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-enlaces, .footer-redes {
+  margin: 10px 0;
+}
+
+.footer-enlaces a, .footer-redes a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-enlaces a:hover,
+.footer-redes a:hover {
+  color: #e9fe00;
+}
+
+.tags {
+  margin-top: 15px;
+  overflow: hidden; 
+}
+
+.tag {
+  background:#1c8100;
+  color: #ffff;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  margin: 0 10px 10px 0;
+  border-radius: 100px;
+}
+
+.ProyectosDestacados {
+  max-width: auto;
+  padding: 20px;
+}
+
+.ProyectosDestacados h2 {
+  margin-bottom: 20px;
+}
+
+.ProyectosLista {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ProyectosLista > div {
+  flex: 1;
+}
+
+.Proyectos {
+  height: 400px;
+  width: 100%;
+  border: 2px solid #dbd9d0;
+  border-radius: 15px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: center;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+}
+
+.Proyectos h3 {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.tag2 {
+  background:#006aff;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  margin: 15px 10px 10px 0;
+  border-radius: 100px;
+}
+
+.tag2 a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+#btnSilenciar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+[data-bs-toggle="tooltip"] {
+  cursor: help;
+}
+
+.Contacto .btn-toggle {
+  background: transparent;
+  border: none;
+  color: #006aff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.Contacto .btn-toggle:hover {
+  color: #004bb3;
+}
+
+.info-extra-box {
+  background: #f7f7f7;
+  border-left: 4px solid #006aff;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #333;
+  border-radius: 4px;
+}
+
+.video-wrapper {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.btn-play {
+  margin-top: 10px;
+  background-color: #006aff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-play:hover {
+  background-color: #004bb3;
+}

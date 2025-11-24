@@ -1,0 +1,208 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Alejandro Laglera</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="modal fade" id="audioModal" tabindex="-1" aria-labelledby="audioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="audioModalLabel">Bienvenido a mi portfolio</h5>
+        </div>
+        <div class="modal-body">
+          ¿Quieres activar el audio de fondo?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="activarAudio()">Activar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audioFondo" loop preload="none">
+    <source src="audio/musica.mp3" type="audio/mpeg">
+    <source src="audio/musica.ogg" type="audio/ogg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <button id="btnSilenciar" class="btn btn-dark position-fixed bottom-0 start-0 m-3" style="z-index: 1050;" onclick="toggleAudio()" title="Silenciar/Activar audio">🔊</button>
+
+  <header class="header">
+    <p>😁 Alejandro Laglera Ferrando</p>
+    <div class="enlaces">
+      <a href="#Sobremi">Sobre mí</a>
+      <a href="#ProyectosDestacados">Proyectos</a>
+      <a href="#Contacto">Contacto</a>
+    </div>
+  </header>
+
+  <div id="Sobremi" class="Sobremi">
+    <h2>🙋🏻‍♂️ Sobre mí</h2>
+    <div class="contenido-sobremi">
+      <div class="info-personal">
+        <p>Soy desarrollador web en formación, actualmente cursando el Grado Superior de Desarrollo de Aplicaciones Web en MEDAC Sevilla. Mi trayectoria en el sector tecnológico comenzó con el Grado Medio en Sistemas Microinformáticos y Redes, lo que me ha proporcionado una base sólida en infraestructura y redes que complementa mi especialización actual en desarrollo.</p>
+        <p>Me gusta entender cómo funcionan las cosas de principio a fin. Haber trabajado antes con sistemas y redes me ayuda ahora a desarrollar aplicaciones pensando también en cómo van a funcionar realmente.
+        <br><br>Siempre estoy aprendiendo algo nuevo y me motiva enfrentarme a proyectos que me saquen de mi zona de confort. </p>
+        <ul class="tags">
+          <li class="tag">HTML</li>
+          <li class="tag">CSS</li>
+          <li class="tag">Java</li>
+          <li class="tag">JavaScript</li>
+          <li class="tag">PHP</li>
+        </ul>
+      </div>
+      <div class="trayectoria-escolar">
+        <h3>🎓 Formación Académica</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Grado Superior en Desarrollo de Aplicaciones Web</h4>
+              <p class="institucion">MEDAC</p>
+              <span class="fecha">2024 - 2026</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Grado Medio en Sistemas Microinformáticos y Redes</h4>
+              <p class="institucion">Ilerna Online</p>
+              <span class="fecha">2022 - 2024</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Bachillerato Tecnológico</h4>
+              <p class="institucion">IES Chaves Nogales</p>
+              <span class="fecha">2020 - 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ProyectosDestacados" class="ProyectosDestacados">
+    <h2>💻 Mis proyectos</h2>
+    <div class="ProyectosLista">
+      <div class="Proyectos">
+        <h3>Portfolio</h3>
+        <p>Este portfolio está desarrollado con HTML y CSS, sin frameworks ni librerías externas. He querido crear algo limpio y funcional que refleje mis conocimientos en desarrollo web front-end y mi capacidad para maquetar desde cero.
+        <br> <br>Cada sección está pensada para mostrar mi trabajo de forma clara y directa. Aunque simple en su enfoque, demuestra mi dominio de los fundamentos del desarrollo web, que considero esenciales antes de saltar a tecnologías más complejas.</p>
+        <li class="tag2"><a href="#Sobremi">+INFO</a></li>
+      </div>
+      <div class="Proyectos">
+        <h3>Beyond Horizons</h3>
+        <p>Web estática desarrollada con HTML y CSS durante mi primer año en el Grado Superior de DAW. Se trata de una agencia de viajes ficticia especializada en destinos poco convencionales como la Luna, la Antártida y otros lugares extremos.
+        <br> <br> El proyecto me permitió trabajar en el diseño y maquetación desde cero, creando una estructura visual atractiva y coherente con la temática aventurera de la agencia. Aunque es un concepto creativo, puse foco en aplicar buenas prácticas de código y diseño responsive.
+        </p>
+        <li class="tag2"><a href="https://laglera.github.io/beyondhorizons/" target="_blank">+INFO</a></li>
+      </div>
+      <div class="Proyectos">
+        <h3>Aplicación de Películas</h3>
+        <p>Aplicación de escritorio desarrollada en Java con interfaz gráfica Swing y base de datos MySQL. Incluye sistema de registro y login de usuarios, catálogo de películas con filtros por género y año, y buscador con detalles de cada título.
+        <br> <br>   Este proyecto me permitió trabajar tanto en backend (gestión de base de datos) como en frontend (diseño de interfaces con Swing), aplicando programación orientada a objetos y manejo de bases de datos relacionales.
+        </p>
+        <li class="tag2"><a href="https://google.com" target="_blank">+INFO</a></li>
+      </div>
+    </div>
+  </div>
+
+<div id="Contacto" class="Contacto">
+  <h2>📲 Contacto</h2>
+
+  <p>
+    <button class="btn-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#infoExtra" aria-expanded="false" aria-controls="infoExtra">
+      ⬇️ Más información sobre el portfolio ⬇️
+    </button>
+  </p>
+  <div class="collapse" id="infoExtra">
+    <div class="info-extra-box">
+      <p>Este portfolio integra audio de fondo y un video para ofrecer una experiencia multimedia más rica. Está optimizado para distintos navegadores gracias al uso de múltiples formatos.</p>
+    </div>
+  </div>
+
+  <div class="video-wrapper">
+    <video id="videoPresentacion" poster="img/poster.jpg" preload="none">
+      <source src="video/presentacion.mp4" type="video/mp4">
+      <source src="video/presentacion.ogg" type="video/ogg">
+      <source src="video/presentacion.webm" type="video/webm">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <button class="btn-play" onclick="document.getElementById('videoPresentacion').play()" data-bs-toggle="tooltip" data-bs-placement="top" title="Reproduce el video de presentación">
+      ▶ Reproducir video
+    </button>
+  </div>
+
+  <form action="#">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+    <label for="asunto">Asunto:</label>
+    <input type="text" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Alejandro Laglera Ferrando. Todos los derechos reservados.</p>
+    <div class="footer-enlaces">
+      <a href="#Sobremi">Sobre mí</a>
+      <a href="#ProyectosDestacados">Proyectos</a>
+      <a href="#Contacto">Contacto</a>
+    </div>
+    <div class="footer-redes">
+      <a href="https://github.com/laglera" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/alejandro-laglera-ferrando-a16446348/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Mostrar modal al cargar
+    window.addEventListener('DOMContentLoaded', () => {
+      const modal = new bootstrap.Modal(document.getElementById('audioModal'));
+      modal.show();
+    });
+
+    // Activar audio
+    function activarAudio() {
+      const audio = document.getElementById('audioFondo');
+      audio.volume = 0.05;
+      audio.play();
+      bootstrap.Modal.getInstance(document.getElementById('audioModal')).hide();
+    }
+
+    // Silenciar/activar audio
+    function toggleAudio() {
+      const audio = document.getElementById('audioFondo');
+      const btn = document.getElementById('btnSilenciar');
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '🔊';
+      } else {
+        audio.pause();
+        btn.textContent = '🔇';
+      }
+    }
+  </script>
+
+</body>
+</html>
